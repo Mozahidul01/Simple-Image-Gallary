@@ -55,7 +55,7 @@ git clone https://github.com/Mozahidul01/Simple-Image-Gallery.git
 - Navigate to the project directory:
 
 ```bash
-cd Simple-Image-Gallary
+cd Simple-Image-Gallery
 ```
 
 - Install dependencies:
