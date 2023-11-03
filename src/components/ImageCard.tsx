@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { GallaryImage } from "./CardContainer";
+import { GalleryImage } from "../data/gallaryData";
 
 interface ImageCardProps {
-  data: GallaryImage;
+  data: GalleryImage;
   isSelected: boolean;
   onImageSelect: VoidFunction;
 }

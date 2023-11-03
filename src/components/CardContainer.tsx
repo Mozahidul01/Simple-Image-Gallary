@@ -2,50 +2,45 @@ import { useState } from "react";
 
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 
-import gallaryData from "../data/GallaryData.json";
+import { GalleryImage, galleryData } from "../data/gallaryData";
+
 import ImageCard from "./ImageCard";
 import ImageInput from "./ImageInput";
 import { Container } from "./Container";
 
-export interface GallaryImage {
-  id: number;
-  name: string;
-  imageUrl: string;
-}
-
 export default function CardContainer() {
-  const [gallaryImages, setGallaryImages] =
-    useState<GallaryImage[]>(gallaryData);
+  const [galleryImages, setGalleryImages] =
+    useState<GalleryImage[]>(galleryData);
 
-  const [selectedImages, setSelectedImages] = useState<GallaryImage[]>([]);
+  const [selectedImages, setSelectedImages] = useState<GalleryImage[]>([]);
 
   // Input New Image to gallary
   const handleImageSelect = (image: File | null) => {
     if (!image) return;
 
-    const data: GallaryImage = {
+    const data: GalleryImage = {
       id: Math.round(Math.random() * 10),
       name: image.name,
       imageUrl: URL.createObjectURL(image),
     };
 
-    setGallaryImages((prev) => [...prev, data]);
+    setGalleryImages((prev) => [...prev, data]);
   };
 
   // handle Image resorting using drag and drop
   const onDragEnd = (result: any) => {
     if (!result.destination) return;
 
-    const items = Array.from(gallaryImages);
+    const items = Array.from(galleryImages);
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
 
-    setGallaryImages(items);
+    setGalleryImages(items);
   };
 
   // Delete selected items
   const deleteHandler = () => {
-    setGallaryImages((prev) =>
+    setGalleryImages((prev) =>
       prev.filter((item) => !selectedImages.includes(item))
     );
     setSelectedImages([]);
@@ -93,7 +88,7 @@ export default function CardContainer() {
                     ${snapshot.isDraggingOver ? "h-auto" : "h-full"}
                   `}
                 >
-                  {gallaryImages.map((data, index) => (
+                  {galleryImages.map((data, index) => (
                     <Draggable
                       key={data.id}
                       draggableId={data.id.toString()}
