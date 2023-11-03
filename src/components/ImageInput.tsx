@@ -27,7 +27,7 @@ const ImageInput: FC<ImageInputProps> = ({ onImageSelect }) => {
 
   return (
     <div
-      className="border border-dashed border-gray-300 min-h-[10rem] rounded-md bg-gray-50 flex flex-col items-center justify-center p-10 cursor-pointer"
+      className="border border-dashed border-gray-300 min-h-[8rem] rounded-md bg-gray-50 flex flex-col items-center justify-center p-4 cursor-pointer"
       onClick={() => fileRef.current?.click()}
       onDragEnter={handleDrag}
       onDragOver={handleDrag}
