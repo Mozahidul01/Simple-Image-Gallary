@@ -20,20 +20,25 @@ This project is a responsive image gallery built using React JS with features li
    - Implemented a grid layout for the image gallery.
    - The gallery displays images with one feature image larger than the others.
 
-2. **Sorting:**
+2. **Adding Image:**
+   - Users can easily add images by clicking the "Add Image" button and selecting an image from their device.
+   - Utilize drag-and-drop functionality for seamless image uploads.
+   - Ensure that each image can only be added once, preventing duplicates.
+
+3. **Sorting:**
    - Enabled reordering functionality to allow users to rearrange the order of images in the gallery.
    - Implemented drag-and-drop functionality for intuitive reordering.
 
-3. **Deleting Multiple Images:**
+4. **Deleting Multiple Images:**
    - Allows users to select and delete multiple images.
    - Provides clear visual indication of selected images.
 
-4. **Setting Feature Image:**
+5. **Setting Feature Image:**
    - Allows users to set a feature image by sorting.
    - The first image (from left to right) is considered the featured image.
    - The feature image is visually distinct from the other images.
 
-5. **User Experience:**
+6. **User Experience:**
    - Ensures a smooth and responsive user experience.
    - Utilizes transitions and animations for a polished look and feel.
 
