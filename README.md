@@ -1,27 +1,74 @@
-# React + TypeScript + Vite
+# Simple Image Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Live Website](https://mozahidul01-image-gallery.netlify.app/)
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a responsive image gallery built using React JS with features like reordering, deleting multiple images, and setting a feature image. The gallery provides a visually appealing and seamless user experience.
 
-## Expanding the ESLint configuration
+### Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React JS
+- TypeScript
+- Tailwind CSS
+- react-beautiful-dnd
+- Vite
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+1. **Gallery Layout:**
+   - Implemented a grid layout for the image gallery.
+   - The gallery displays images with one feature image larger than the others.
+
+2. **Sorting:**
+   - Enabled reordering functionality to allow users to rearrange the order of images in the gallery.
+   - Implemented drag-and-drop functionality for intuitive reordering.
+
+3. **Deleting Multiple Images:**
+   - Allows users to select and delete multiple images.
+   - Provides clear visual indication of selected images.
+
+4. **Setting Feature Image:**
+   - Allows users to set a feature image by sorting.
+   - The first image (from left to right) is considered the featured image.
+   - The feature image is visually distinct from the other images.
+
+5. **User Experience:**
+   - Ensures a smooth and responsive user experience.
+   - Utilizes transitions and animations for a polished look and feel.
+
+## Usage
+
+To run this project locally, follow these steps:
+
+- Clone the repository:
+
+```bash
+git clone https://github.com/Mozahidul01/Simple-Image-Gallary.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Navigate to the project directory:
+
+```bash
+cd Simple-Image-Gallary
+```
+
+- Install dependencies:
+
+```bash
+npm install
+```
+
+- Start the development server:
+
+```bash
+npm run dev
+```
+
+The project will be available at [http://localhost:5173](http://localhost:5173).
+
+## Contact
+
+- Author: [Mozahidul Islam](https://mozahidul01.netlify.app)
+- Email: [mmozahidul01@gmail.com](mailto:mmozahidul01@gmail.com)
+- GitHub: [GitHub Profile](https://github.com/mozahidul01)
